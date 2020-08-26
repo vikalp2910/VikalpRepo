@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <title>User Detail page</title>
 </head>
-<body bgcolor="green">
+<body bgcolor="pink">
    <center>
     <h1>User Detail page</h1>
             <br/>
