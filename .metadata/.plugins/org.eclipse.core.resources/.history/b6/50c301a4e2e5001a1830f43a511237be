@@ -1,0 +1,30 @@
+package com.example.demo;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class Test {
+	
+	@RequestMapping(value = "/reg")
+	public String registration()
+	{
+		return "registration";
+	}
+	
+	@RequestMapping(value = "/userDetail")
+	public String getMessage(UserRegistration ur)
+	{
+		ModelMap model=new ModelMap();
+		model.addAttribute("no", ur.geteNo());
+		model.addAttribute("name", ur.geteName());
+		model.addAttribute("email", ur.geteEmail());
+		
+		ModelAndView mv=new ModelAndView("user-detail");
+		mv.addObject("regObj", model);
+		return "user-detail";
+	}
+
+}

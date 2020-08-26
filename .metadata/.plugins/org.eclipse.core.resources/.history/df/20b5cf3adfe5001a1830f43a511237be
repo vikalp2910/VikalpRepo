@@ -1,0 +1,22 @@
+package com.example.demo;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class Test {
+	
+	@RequestMapping(value = "/reg")
+	public String registration()
+	{
+		return "registration";
+	}
+	
+	@RequestMapping(value = "/userDetail")
+	public String getMessage()
+	{
+		System.out.println("++++++++++in user detail page++++++");
+		return "user-detail";
+	}
+
+}
